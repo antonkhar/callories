@@ -49,15 +49,16 @@ export class DiaryComponent {
       img.style.opacity = '0';
       setTimeout(() => {
         if (img.src.endsWith('plus.png')) {
-          img.src = '/assets/minus.png';
+          img.src = './assets/minus.png'; // Изменение пути здесь
         } 
         else {
-          img.src = '/assets/plus.png';
+          img.src = './assets/plus.png'; // Изменение пути здесь
         }
         img.style.opacity = '1';
       }, 250);
     }
   }
+  
 
   ngAfterViewInit() {
     this.myArray = [];
