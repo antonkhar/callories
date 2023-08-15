@@ -49,10 +49,10 @@ export class DiaryComponent {
       img.style.opacity = '0';
       setTimeout(() => {
         if (img.src.endsWith('plus.png')) {
-          img.src = './assets/minus.png';
+          img.src = '/assets/minus.png';
         } 
         else {
-          img.src = './assets/plus.png';
+          img.src = '/assets/plus.png';
         }
         img.style.opacity = '1';
       }, 250);
