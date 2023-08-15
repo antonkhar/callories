@@ -1,0 +1,45 @@
+<div class="jumbotron">
+    <h1 class="display-4">Калькулятор калорийности продуктов</h1>
+    <div class="block">
+        <p class="lead">Этот калькулятор позволит составить вам собственные блюда из продуктов с учетом граммовок, и расчитать его каллорийность на 100 грамм, а после добавить блюдо к общему списку, чтобы после записать его в свой дневник.</p>
+    </div>
+  </div>
+    <input class = "form-control" type="text" [(ngModel)]="foodName">
+  <div class="block-container">
+    <div id="original-block">
+      <div class="list-item">
+        <div class="list-item-details">
+          <div class="eat">
+            <label for="name" class = "name ">Пища:</label>
+            <input #myInput class="eat form-control my-input-class" type="text" id="fruit" list="fruits" [(ngModel)]="selectedFruitName" (ngModelChange)="onSelectedFruitNameChanged()">
+            <datalist id="fruits">
+              <option *ngFor="let eat of products" [value]="eat[1]"></option>
+            </datalist> 
+          </div>
+          <div class="count">
+            <label for="name" class = "name">Кол-во (грамм):</label>
+            <input class = "count form-control my-input-class2" type="number" [(ngModel)]="selectedColoriesCount" (ngModelChange)="onSelectedColoriesCountChanged()">
+          </div>
+      </div>
+    </div>
+    </div>
+    <div id="block-container">
+      <!-- Сюда будут добавляться копии блока -->
+    </div>
+  </div>
+<div class="container">
+    <div class="count">
+        <label for="name" class = "name">Каллорийность (на 100 грамм):</label>
+        <input class="form-control" type="number" readonly value="0" [(ngModel)]="caloriesInHundred">
+      </div>
+      <div class="count">
+        <label for="name" class = "name">Каллорийность (порция):</label>
+        <input class="form-control" type="number" readonly value="0" [(ngModel)]="sumColoriesPorcies">
+      </div>
+</div>
+  <div class="container">
+    <button class="btn btn-success mybutton" style="background-color: #8BC34A; border-color: #8BC34A;" (click)="duplicateBlock()">Добавить продукт</button>
+    <button class="btn btn-success mybutton" style="background-color: #8BC34A; border-color: #8BC34A;" (click)="deleteLastBlock()">Удалить продукт</button>
+    <button class="btn btn-success mybutton" style="background-color: #8BC34A; border-color: #8BC34A;" (click)="ngAfterViewInit()">Запомнить блюдо</button>
+  </div>
+  

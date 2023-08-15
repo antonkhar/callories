@@ -1,0 +1,45 @@
+input{
+    margin-right: 20px;
+}
+
+button {
+    margin: 0 10px;
+}
+
+.list-item-details{
+    display: flex;
+}
+
+.name{
+    margin-right: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.food{
+    width: 600px;
+    margin: 0 auto;
+}
+
+.count{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.block-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Дополнительно центрирует по вертикали */
+}
+
+#original-block, #block-container{
+    margin-top: 10px;
+}

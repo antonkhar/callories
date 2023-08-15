@@ -1,0 +1,32 @@
+.text-center{
+    margin-top: 10px;
+}
+
+.form-control{
+    width: 200px;
+    height: 200px;
+    font-size: 100px;
+}
+
+.parent, .col-md-6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-4 {
+    margin-bottom: 20px; /* Удаление отступов */
+}
+
+p {
+    margin-top: 20px; /* Удаление отступов */
+}
+
+.child {
+    display: inline-block;
+    margin-right: 10px; /* Отступ между блоками */
+}
+
+input{
+    text-align: center;
+}

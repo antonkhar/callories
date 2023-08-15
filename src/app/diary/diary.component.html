@@ -1,0 +1,146 @@
+<div class="jumbotron">
+  <h1 class="display-4">Дневник питания</h1>
+  <div class="block">
+      <p class="lead">Дневник питания - это отличный инструмент для тех, кто стремится следить за своим здоровьем и поддерживать правильный режим питания. Ведение дневника питания помогает не только отслеживать количество потребляемых калорий, но и контролировать баланс белков, жиров и углеводов. С помощью дневника питания можно выявлять свои пищевые привычки и привыкать к более здоровому питанию. Это также помогает понимать, какие продукты лучше употреблять в большем количестве, а какие - в меньшем, и насколько часто можно позволить себе перекусы.</p>
+  </div>
+</div>
+
+<div class="list-container">
+    <div (click)="onListItemClick($event)" class="list-item">
+        <div class="wrapper">
+            <img src="\assets\z.png" class = 'logo_head wrapped' alt="Logo">
+            <h3 class="list-item-title wrapped">Завтрак</h3>
+            <img src="\assets\plus.png" class = 'hider' alt="Logo">
+        </div>
+      <!-- tt -->
+      <div class="list-item-details">
+        <div class="eat">
+          <label for="name" class = "name">Пища:</label>
+          <input type="text" class="form-control my-input-class" id="fruit" list="fruits">
+          
+          <datalist id="fruits">
+            <option *ngFor="let fruit of products" [value]="fruit[1]"></option>
+          </datalist>
+        </div>
+        <div class="count">
+          <label for="name" class = "name">Кол-во (грамм):</label>
+          <input class="form-control my-input-class2" type="number">
+        </div>
+        <div class="colories">
+          <label for="name" class = "name">Каллории:</label>
+          <input class="form-control" type="number" readonly [(ngModel)]="selectedColoriesCount[0]">
+        </div>
+      </div>
+        
+      <!-- tt -->  
+    </div>
+    <div (click)="onListItemClick($event)" class="list-item">
+        <div class="wrapper">
+            <img src="\assets\o.png" class = 'logo_head wrapped' alt="Logo">  
+            <h3 class="list-item-title wrapped">Обед</h3>
+            <img src="\assets\plus.png" class = 'hider' alt="Logo">
+        </div>
+      <!-- tt -->
+      <div class="list-item-details">
+        <div class="eat">
+          <label for="name" class = "name">Пища:</label>
+          <input class="form-control my-input-class" type="text" id="fruit" list="fruits">
+          
+          <datalist id="fruits">
+            <option *ngFor="let fruit of products" [value]="fruit[1]"></option>
+          </datalist>
+        </div>
+        <div class="count">
+          <label for="name" class = "name">Кол-во (грамм):</label>
+          <input class="form-control my-input-class2" type="number">
+        </div>
+        <div class="colories">
+          <label for="name" class = "name">Каллории:</label>
+          <input class="form-control" type="number" readonly [(ngModel)]="selectedColoriesCount[1]">
+        </div>
+      </div>
+        
+      <!-- tt -->
+    </div>
+    <div (click)="onListItemClick($event)" class="list-item">
+        <div class="wrapper">
+            <img src="\assets\u.png" class = 'logo_head wrapped' alt="Logo">  
+            <h3 class="list-item-title wrapped">Ужин</h3>
+            <img src="\assets\plus.png" class = 'hider' alt="Logo">
+        </div>
+      <!-- tt -->
+      <div class="list-item-details">
+        <div class="eat">
+          <label for="name" class = "name">Пища:</label>
+          <input class="form-control my-input-class" type="text" id="fruit" list="fruits">
+          
+          <datalist id="fruits">
+            <option *ngFor="let fruit of products" [value]="fruit[1]"></option>
+          </datalist>
+        </div>
+        <div class="count">
+          <label for="name" class = "name">Кол-во (грамм):</label>
+          <input class="form-control my-input-class2" type="number">
+        </div>
+        <div class="colories">
+          <label for="name" class = "name">Каллории:</label>
+          <input class="form-control" type="number" readonly [(ngModel)]="selectedColoriesCount[2]">
+        </div>
+      </div>
+        
+      <!-- tt -->
+    </div>
+    <div (click)="onListItemClick($event)" class="list-item">
+    <div class="wrapper">
+        <img src="\assets\p.png" class = 'logo_head wrapped' alt="Logo">
+        <h3 class="list-item-title wrapped">Перекус/Другое</h3>
+        <img src="\assets\plus.png" class = 'hider' alt="Logo">
+    </div>
+        <!-- tt -->
+      <div class="list-item-details">
+        <div class="eat">
+          <label for="name" class = "name">Пища:</label>
+          <input class="form-control my-input-class" type="text" id="fruit" list="fruits">
+          
+          <datalist id="fruits">
+            <option *ngFor="let fruit of products" [value]="fruit[1]"></option>
+          </datalist>
+        </div>
+        <div class="count">
+          <label for="name" class = "name">Кол-во (грамм):</label>
+          <input class="form-control my-input-class2" type="number">
+        </div>
+        <div class="colories">
+          <label for="name" class = "name">Каллории:</label>
+          <input class="form-control" type="number" readonly [(ngModel)]="selectedColoriesCount[3]">
+        </div>
+      </div>
+        
+      <!-- tt -->
+    </div>
+    <div (click)="onListItemClick($event)" class="list-item water">
+        <div class="wrapper">
+            <img src="\assets\w.png" class = 'logo_head wrapped' alt="Logo">
+            <h3 class="list-item-title wrapped">Трекер воды</h3>
+            <img src="\assets\plus.png" class = 'hider' alt="Logo">
+        </div>
+        <!-- tt -->
+      <div class="list-item-details">
+        <div class="count">
+          <label for="name" class = "name">Выпитая вода (Литры):</label>
+          <input class="form-control my-input-class3" type="number" value="0">
+        </div>
+        <div class="count">
+          <label for="name" class = "name">Норма воды (Литры):</label>
+          <input class="form-control my-input-class3" type="number" readonly value="3.5">
+        </div>
+        <div class="colories">
+          <label for="name" class = "name">Необходимо выпить (Литры):</label>
+          <input class="form-control" type="number" readonly [(ngModel)]="selectedWaterCount">
+        </div>
+      </div>
+        
+      <!-- tt -->
+      </div>
+    <button class="btn btn-success mybutton" style="background-color: #8BC34A; border-color: #8BC34A;" (click)="ngAfterViewInit()">Завершить день</button>
+  </div>

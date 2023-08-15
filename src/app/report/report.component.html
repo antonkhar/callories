@@ -1,0 +1,43 @@
+<div class="jumbotron">
+  <h1 class="display-4">Отчет об использовании сервиса</h1>
+  <div class="block">
+      <p class="lead">Отчет по параметрам "Калорий сьедено", "Блюд сьедено", "Блюд добавлено" и "Дней использования" является важным инструментом для контроля вашего питания и позволяет отслеживать прогресс в достижении ваших целей. Эти параметры являются ключевыми для понимания вашего рациона и дает вам возможность увидеть, сколько калорий вы съели, какое количество блюд было приготовлено и сколько дней вы использовали приложение для отслеживания питания. Этот отчет поможет вам более осознанно и эффективно планировать свой рацион и добиваться желаемых результатов в своей диете и здоровье.</p>
+  </div>
+</div>
+<div class="container">
+  <h1 class="text-center display-4">Отчет</h1>
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="calories-eaten" class="col-sm-4 col-form-label">Калорий сьедено</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="calories-eaten" readonly [(ngModel)]="caloriesEaten">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="dishes-eaten" class="col-sm-4 col-form-label">Блюд сьедено</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="dishes-eaten" readonly [(ngModel)]="dishesEaten">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="dishes-added" class="col-sm-4 col-form-label">Блюд добавлено</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="dishes-added" readonly [(ngModel)]="dishesAdded">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="days-in-app" class="col-sm-4 col-form-label">Дней использования</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="days-in-app" readonly [(ngModel)]="daysOfUse">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <p>Спасибо что пользуетесь нашим ресурсом!</p>
+  </div>
+  <div class="text-center">
+    <button class="btn btn-success mybutton mx-auto" style="background-color: #8BC34A; border-color: #8BC34A;" (click)="saveInfo()">Скачать отчет в Excel</button>
+  </div>
+</div>
